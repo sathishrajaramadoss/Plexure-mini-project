@@ -1,0 +1,198 @@
+{% extends "bootstrap/base.html" %}
+{% block html_attribs %} lang="en"{% endblock %}
+
+
+{% block title %}GMALite{% endblock %}
+
+
+{% block content %}
+    <h1>
+        Client Look-Up(GMALite)
+    </h1>
+
+    <h2>
+        <style>
+        * {
+  box-sizing: border-box;
+}
+
+.flex-container {
+  background-color: white;
+  resize: horizontal;
+  overflow: hidden;
+  display: flex;
+  margin: 1em;
+}
+
+.flex-container1 {
+  background-color: white;
+  resize: vertical;
+  overflow: hidden;
+  display: flex;
+  margin: 1em;
+}
+
+.item5 {
+  margin: 1em;
+  padding: 0.5em;
+  width: 110px;
+  min-width: 0;
+  background-color: darkorange;
+  color: black;
+  font-family: monospace;
+  font-size: 13px;
+}
+
+.item1 {
+  margin: 1em;
+  padding: 0.5em;
+  width: 110px;
+  min-width: 0;
+  background-color: #11ffee00;;
+  color: black;
+  font-family: monospace;
+  font-size: 13px;
+}
+
+.item2 {
+  margin: 1em;
+  padding: 0.5em;
+  width: 110px;
+  min-width: 0;
+  background-color: gray;
+  color: black;
+  font-family: monospace;
+  font-size: 13px;
+}
+
+.item3 {
+  margin: 1em;
+  padding: 0.5em;
+  width: 110px;
+  min-width: 0;
+  background-color: #FFD700;
+  color: black;
+  font-family: monospace;
+  font-size: 13px;
+}
+.item4 {
+  margin: 1em;
+  padding: 2em;
+  width: 110px;
+  min-width: 0;
+  background-color: #9ACD32;
+  color: black;
+  font-family: monospace;
+  font-size: 13px;
+}
+
+.item {
+  margin: 1em;
+  padding: 0.5em;
+  width: 110px;
+  min-width: 0;
+  background-color: #F4A460;
+  color: black;
+  font-family: monospace;
+  font-size: 13px;
+}
+.auto {
+  flex: auto;
+}
+</style>
+</h2>
+<div class="flex-container">
+    <div class="item auto"> <center>Total Users<br>{{Total_Users_res}}</center></div>
+</div>
+
+<div class="flex-container">
+    <div class="item5 auto">Total Email Users <br> {{ Total_Email_Reg_res }}</div>
+    <div class="item1 auto"></div>
+    <div class="item2 auto">Total Migrated Users <br> {{ Migrated_Users_res1 }}</div>
+    <div class="item1 auto"></div>
+    <div class="item3 auto">Total Device Registration <br> {{ Device_Reg_Total_res }}</div>
+</div>
+
+<div class="flex-container">
+  <div class="item5 auto">Unregisterd Email Users <br> {{ Unregistered_Email_Users_res }}</div>
+  <div class="item1 auto"></div>
+  <div class="item2 auto">Non Converted Migrated Users <br> {{ Migrated_Users_res2 }}</div>
+  <div class="item1 auto"></div>
+  <div class="item3 auto">Device Registration Active <br> {{ Device_Reg_Active_res }}</div>
+
+</div>
+
+<div class="flex-container">
+  <div class="item5 auto">Reg Email Active Users <br> {{ Reg_Email_Active_Users_res }}</div>
+  <div class="item1 auto"></div>
+  <div class="item2 auto">Migrated Users Logged-In<br> {{ Migrated_Users_res3 }}</div>
+  <div class="item1 auto"></div>
+  <div class="item3 auto">Device Registration In-Active <br> {{ Device_Reg_Inactive_res }}</div>
+
+</div>
+
+<div class="flex-container">
+  <div class="item5 auto">In-Active Users <br> {{ Reg_Email_Inactive_Users_res }} </div>
+  <div class="item1 auto"></div>
+  <div class="item1 auto"></div>
+  <div class="item1 auto"></div>
+  <div class="item3 auto">Device Redeemers Active <br> {{ Device_Active_Redeemers_res }}</div>
+
+</div>
+
+<div class="flex-container">
+  <div class="item5 auto">Redmeers Active Users <br> {{ Redmeers_Active_Users_Email_res }} </div>
+  <div class="item1 auto"></div>
+  <div class="item1 auto"></div>
+  <div class="item1 auto"></div>
+  <div class="item3 auto">Device Non-Redeemers Active <br> {{ Device_Active_NonRedeemers_res }}</div>
+
+</div>
+
+<div class="flex-container">
+  <div class="item5 auto">Non Redmeers Active Users <br> {{ Non_Redmeers_Active_Users_Email_res }} </div>
+  <div class="item1 auto"></div>
+  <div class="item1 auto"></div>
+  <div class="item1 auto"></div>
+  <div class="item1 auto"></div>
+</div>
+
+<div class="flex-container">
+    <div class="item auto"> <center>KPI's</center></div>
+</div>
+
+<div class="flex-container">
+  <div class="item4 auto">App_start_up <br> {{ KPIs_res1 }}</div>
+  <div class="item4 auto">Adv_Impressions <br> {{ KPIs_res2 }}</div>
+  <div class="item4 auto">Adv_Clicks <br> {{ KPIs_res3 }}</div>
+  <div class="item4 auto">Offer_Impressions <br> {{ KPIs_res4 }}</div>
+</div>
+<div class="flex-container">
+    <div class="item4 auto">Offer_Clicks <br> {{ KPIs_res5 }}</div>
+    <div class="item4 auto">Offer_Redemptions <br> {{ KPIs_res6 }}</div>
+    <div class="item4 auto">Offer_Instore_Redemptions <br> {{ KPIs_res7 }}</div>
+    <div class="item4 auto">Push_Msg_Sent <br> {{ KPIs_res8 }}</div>
+
+</div>
+<div class="flex-container">
+    <div class="item4 auto">Push_Msg_Seen <br> {{ KPIs_res9 }}</div>
+    <div class="item4 auto">Push_Msg_Clicked <br> {{ KPIs_res10 }}</div>
+    <div class="item4 auto">Loyalty_Card_Impressions <br> {{ KPIs_res11 }}</div>
+    <div class="item4 auto">Loyalty_Card_Instance_Activated <br> {{ KPIs_res12 }}</div>
+</div>
+<div class="flex-container">
+  <div class="item4 auto">Loyalty_Card_Points_Created <br> {{ KPIs_res13 }}</div>
+  <div class="item4 auto">Loyalty_Card_Rewards_Activated <br> {{ KPIs_res14 }}</div>
+  <div class="item4 auto">App_Page_Impressions <br> {{ KPIs_res15 }}</div>
+  <div class="item4 auto">Button_Clicks <br> {{ KPIs_res16 }}</div>
+</div>
+
+<p>
+    <a href="{{ url_for('home') }}">Return to Home</a>
+</p>
+
+{% endblock %}
+
+{% block scripts%}
+{{ super() }}
+{% endblock %}

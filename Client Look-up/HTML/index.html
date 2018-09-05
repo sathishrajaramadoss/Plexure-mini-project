@@ -1,0 +1,44 @@
+{% extends "bootstrap/base.html" %}
+{% block html_attribs %} lang="en"{% endblock %}
+
+
+{% block title %}Plexure Data Look-Up{% endblock %}
+
+{% block content %}
+
+<div>
+    <h1>
+        CLIENT LOOK-UP!
+    </h1>
+</div>
+<style>
+#example1 {
+    border: 0px solid black;
+    background-image:url("https://www.deloitteprivate.co.nz/media/1688/plexure-440px.png");
+    background-color: darkorange;
+    background-size: 100% 50% 10%;
+    background-repeat: no-repeat;
+    padding:400px;
+
+}
+</style>
+<div>
+    <form method="POST" action="/Result">
+        <label for="country_name">Merchant : </label>
+        <input id="country_name" name="country_name" type="text" list="country" />
+        <label for="startdate">Start Date : </label><input id="startdate" name="startdate" type="date"/>
+        <label for="enddate">End Date : </label><input id="enddate" name="enddate" type="date"/>
+        <datalist id="country">
+           <option value="GMAL">
+        </datalist>
+        <input type="submit" value="Run">
+    </form>
+
+</div>
+<div id="example1">
+</div>
+{% endblock %}
+
+{% block scripts%}
+{{ super() }}
+{% endblock %}

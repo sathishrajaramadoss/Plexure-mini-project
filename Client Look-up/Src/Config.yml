@@ -1,0 +1,28 @@
+GMAL:
+    SERVER: axj1da13zk.database.windows.net
+    DATABASE: Vmob_lgm695_DWHS
+    USERNAME: plexure
+    PASSWORD: e(AB{rK@vn7&bL)3
+
+DIR:
+    REPORT: Report
+    SOURCE: Src
+
+QUERY:
+    TOTALUSERS : Total_Users.sql
+    TOTALEMAILREG : Total_Email_Reg.sql
+    UNREGUSERS: Unregistered_Users.sql
+    REGINACTIVE : Reg_Email_Inactive_Users.sql
+    REGACTIVE : Reg_Email_Active_Users.sql
+    REDMACTIVE : Redmeers_Active_Users_Email.sql
+    NONREDMACTIVE : Non_Redmeers_Active_Users_Email.sql
+    KPIS : KPIs.sql
+    MIGRATED : MigratedUsers.sql
+    DRTOTAL : Device_Reg_Total.sql
+    DRACTIVE : Device_Reg_Active.sql
+    DRINACTIVE : Device_Reg_Inactive.sql
+    DAREDEEM : Device_Active_Redeemers.sql
+    DANONREDEEM : Device_Active_NonRedeemers.sql
+
+OUTPUT:
+    QUERY : User_Total_res
